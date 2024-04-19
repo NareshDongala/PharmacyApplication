@@ -25,4 +25,12 @@ public class OnlinePharmacyExceptionHandler extends ResponseEntityExceptionHandl
 		   structuer.setData(adressIdNotFoundException.getMessage());
 		   return new ResponseEntity<ResponseStructuer<String>>(structuer,HttpStatus.NOT_FOUND);
 	   }
+	@ExceptionHandler
+	public ResponseEntity<ResponseStructuer<String>> medicalStoreIdNotfoundException( MedicalStoreIdNotFoundException  medicalStoreIdNotFoundException){
+		   ResponseStructuer<String> structuer=new ResponseStructuer<String>();
+		   structuer.setMesaage("STORE ID NOT FOUND");
+		   structuer.setHttpStatusCode(HttpStatus.NOT_FOUND.value());
+		   structuer.setData(medicalStoreIdNotFoundException.getMessage());
+		   return new ResponseEntity<ResponseStructuer<String>>(structuer,HttpStatus.NOT_FOUND);
+	   }
 }

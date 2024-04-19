@@ -1,10 +1,13 @@
 package com.jsp.PharmacyApplication.dto;
 
+import org.springframework.stereotype.Component;
+
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
+@Component
 public class AdressDto {
 	private int adressId;
 	private String streetname;
